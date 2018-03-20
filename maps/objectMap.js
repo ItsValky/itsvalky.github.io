@@ -5,11 +5,11 @@
 // Copyright        :           L.Fino //
 //                                     //
 // CreationDate     :       2018-03-19 //
-// ModifyDate       :       2018-03-19 //
+// ModifyDate       :       2018-03-20 //
 //                                     //
 // File             :     objectMap.js //
 // Project          :     ValkyChatExt //
-// Version          :            0-9-8 //
+// Version          :            0-9-9 //
 // ----------------------------------- //
 
 
@@ -165,3 +165,9 @@ var objMapOthers = {
     PagChomp:(emoteClass + "https://cdn.discordapp.com/emojis/424565494901768193.png" + emotePreview + "https://cdn.discordapp.com/attachments/424586965330034688/424589805670891532/devPog.png" + emoteLabel + "PagChomp" + emoteEnd),
     HealsBadMan:(emoteClass + "https://cdn.discordapp.com/emojis/424595609119358976.png" + emotePreview + "https://cdn.discordapp.com/attachments/424586965330034688/424587483771174913/HealsBadMan.png" + emoteLabel + "HealsBadMan" + emoteEnd)
 };
+
+// Add all emotes in one map
+jQuery.extend(objMap, objMapLocal);
+jQuery.extend(objMap, objMapDev);
+jQuery.extend(objMap, objMapOthers);
+jQuery.extend(objMap, objMapBttv);
