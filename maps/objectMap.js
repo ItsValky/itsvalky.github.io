@@ -42,11 +42,11 @@ var objMap = {}
 
 // List of local emotes
 var objMapLocal = {
-    devTest:(emoteClass + chrome.extension.getURL("assets/test.png") + emotePreview + chrome.extension.getURL("assets/devTest.png") + emoteLabel + "devTest" + emoteEndDev)
 };
 
 // List of online dev emotes
 var objMapDev = {
+    devTest:(emoteClass + "https://cdn.discordapp.com/emojis/424159318166994944.png" + emotePreview + "https://cdn.discordapp.com/attachments/424586965330034688/424590150132301835/devTest.png" + emoteLabel + "devTest" + emoteEndDev),
     devEZ:(emoteClass + "https://cdn.discordapp.com/emojis/424159318171058186.png" + emotePreview + "https://cdn.discordapp.com/attachments/424586965330034688/424590323822362625/devEZ.png" + emoteLabel + "devEZ" + emoteEndDev),
     devTrash:(emoteClass + "https://cdn.discordapp.com/emojis/424159318171058176.png" + emotePreview + "https://cdn.discordapp.com/attachments/424586965330034688/424587606647373834/devTrash.png" + emoteLabel + "devTrash" + emoteEndDev),
     devCool:(emoteClass + "https://cdn.discordapp.com/emojis/424159318011805697.png" + emotePreview + "https://cdn.discordapp.com/attachments/424586965330034688/424587852438044672/devCool.png" + emoteLabel + "devCool" + emoteEndDev),
