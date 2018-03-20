@@ -165,9 +165,3 @@ var objMapOthers = {
     PagChomp:(emoteClass + "https://cdn.discordapp.com/emojis/424565494901768193.png" + emotePreview + "https://cdn.discordapp.com/attachments/424586965330034688/424589805670891532/devPog.png" + emoteLabel + "PagChomp" + emoteEnd),
     HealsBadMan:(emoteClass + "https://cdn.discordapp.com/emojis/424595609119358976.png" + emotePreview + "https://cdn.discordapp.com/attachments/424586965330034688/424587483771174913/HealsBadMan.png" + emoteLabel + "HealsBadMan" + emoteEnd)
 };
-
-// Add all emotes in one object
-jQuery.extend(objMap, objMapLocal);
-jQuery.extend(objMap, objMapDev);
-jQuery.extend(objMap, objMapOthers);
-jQuery.extend(objMap, objMapBttv);
