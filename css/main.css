@@ -1,0 +1,102 @@
+
+
+body {
+    background-color: #16141A;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 1px;
+}
+
+.nav-logo {
+    height: 70px;
+    margin-top: -10px;
+}
+
+.nav-text {
+    left: -100px;
+}
+
+.main-logo {
+    height: 200px;
+}
+
+.main-text {
+    position: relative;
+    margin-top: 100px;
+    font-size: 35px;
+    color: white;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.main-bg {
+    position: absolute;
+    top: 90px;
+    left: -400px;
+}
+
+div {
+    text-align: justify;
+}
+
+hr {
+    border-color: white;
+}
+
+a:link {
+    color: grey;
+    text-decoration: none;
+}
+
+a:visited {
+    color: grey;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+a:active {
+    color: white;
+    text-decoration: none;
+}
+
+.global-font-color {
+    color: grey;
+}
+
+.pull-center {
+    text-align: center;
+}
+
+.pull-down {
+    padding-top: 30px;
+}
+
+.pull-up {
+    margin-top: -20px;
+}
+
+.dl-button {
+    background-color: #FA9C1E;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+    border-radius: 8px;
+}
+
+.dl-button:hover {
+    background-color: #CE7F18;
+    color: white;
+}
+
+.pointer {
+    cursor: pointer;
+}
