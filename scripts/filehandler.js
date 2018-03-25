@@ -1,12 +1,13 @@
 
 
 
-
+// Global variables
 var _URL = window.URL || window.webkitURL;
 var dropboxToken = "k9oBdIXLvLAAAAAAAAAADjJ9D6MwllYWdPZK6JDlNk9rIMz3L3X8LXpeGDeLR4GG"
 
 
 
+// Check if child is empty
 function isEmpty(el) {
     return !$.trim(el.html())
 }
@@ -28,63 +29,69 @@ $("#fileinput-28").change(function(e) {
     if (isEmpty($('#gallery-28'))) {
 
         if ((file = this.files[0])) {
-            img = new Image();
-            img.onload = function() {
+            
+            fileType = file.type.replace("image/", "");
+            if (fileType != "png" || fileType != "gif") {
+                alert("Not a valid image type. PNG and GIF are supported.");
+            } else {
 
-                if (this.width == "28") {
-                    if (this.height == "28"){
-                        
-                        var xhr = new XMLHttpRequest();
+                img = new Image();
+                img.onload = function() {
 
-                        xhr.upload.onprogress = function(evt) {
-                            var percentComplete = parseInt(100.0 * evt.loaded / evt.total);
-                            // Upload in progress. Do something here with the percent complete.
-                        };
+                    if (this.width == "28") {
+                        if (this.height == "28"){
+                            
+                            var xhr = new XMLHttpRequest();
 
-                        xhr.onload = function() {
-                            if (xhr.status === 200) {
-                                var fileInfo = JSON.parse(xhr.response);
-                                // Upload succeeded. Do something here with the file info.
-                            }
-                            else {
-                                var errorMessage = xhr.response || 'Unable to upload file';
-                                // Upload failed. Do something here with the error.
-                                console.log(errorMessage)
-                            }
-                        };
+                            xhr.upload.onprogress = function(evt) {
+                                var percentComplete = parseInt(100.0 * evt.loaded / evt.total);
+                                // Upload in progress
+                            };
 
-                        xhr.open('POST', 'https://content.dropboxapi.com/2/files/upload');
-                        xhr.setRequestHeader('Authorization', 'Bearer ' + dropboxToken);
-                        xhr.setRequestHeader('Content-Type', 'application/octet-stream');
-                        xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
-                            path: '/' +  file.name,
-                            mode: 'add',
-                            autorename: false,
-                            mute: false
-                        }));
+                            xhr.onload = function() {
+                                if (xhr.status === 200) {
+                                    var fileInfo = JSON.parse(xhr.response);
+                                    // Upload succeeded
+                                }
+                                else {
+                                    var errorMessage = xhr.response || 'Unable to upload file';
+                                    // Upload failed
+                                    alert("Error 0x1 - Please contact @ValkyOW")
+                                    console.log(errorMessage)
+                                }
+                            };
 
-                        xhr.send(file);
+                            xhr.open('POST', 'https://content.dropboxapi.com/2/files/upload');
+                            xhr.setRequestHeader('Authorization', 'Bearer ' + dropboxToken);
+                            xhr.setRequestHeader('Content-Type', 'application/octet-stream');
+                            xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
+                                path: '/' +  file.name,
+                                mode: 'add',
+                                autorename: false,
+                                mute: false
+                            }));
 
-                        previewImage28(file);
-                        
+                            xhr.send(file);
+
+                            previewImage28(file);
+                            
+                        }
+
+                    } else {
+                        alert("Wrong image size, choose 28x28 image.")
                     }
-                } else {
-                    alert("Wrong image size, choose 28x28 image.")
-                }
 
-
-            };
-
-            img.onerror = function() {
-                alert("Not a valid image: " + file.type);
-            };
-
-            img.src = _URL.createObjectURL(file);
+                };
+            }
+            
+            try {
+                img.src = _URL.createObjectURL(file);
+            } catch(err) {}
 
         }
 
     } else {
-        alert("Already uploaded a 28px emote.")
+        alert("Already submitted a 28px emote.")
     }
 
 });
@@ -106,62 +113,69 @@ $("#fileinput-112").change(function(e) {
     if (isEmpty($('#gallery-112'))) {
 
         if ((file = this.files[0])) {
-            img = new Image();
-            img.onload = function() {
-                if (this.width == "112") {
-                    if (this.height == "112"){
+            
+            fileType = file.type.replace("image/", "");
+            if (fileType != "png" || fileType != "gif") {
+                alert("Not a valid image type. PNG and GIF are supported.");
+            } else {
+
+                img = new Image();
+                img.onload = function() {
+
+                    if (this.width == "112") {
+                        if (this.height == "112"){
+                            
+                            var xhr = new XMLHttpRequest();
                         
-                        var xhr = new XMLHttpRequest();
-                    
-                        xhr.upload.onprogress = function(evt) {
-                            var percentComplete = parseInt(100.0 * evt.loaded / evt.total);
-                            // Upload in progress. Do something here with the percent complete.
-                        };
-                    
-                        xhr.onload = function() {
-                            if (xhr.status === 200) {
-                                var fileInfo = JSON.parse(xhr.response);
-                                // Upload succeeded. Do something here with the file info.
-                            }
-                            else {
-                                var errorMessage = xhr.response || 'Unable to upload file';
-                                // Upload failed. Do something here with the error.
-                                console.log(errorMessage)
-                            }
-                        };
-                    
-                        xhr.open('POST', 'https://content.dropboxapi.com/2/files/upload');
-                        xhr.setRequestHeader('Authorization', 'Bearer ' + dropboxToken);
-                        xhr.setRequestHeader('Content-Type', 'application/octet-stream');
-                        xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
-                            path: '/' +  file.name,
-                            mode: 'add',
-                            autorename: false,
-                            mute: false
-                        }));
-                    
-                        xhr.send(file);
+                            xhr.upload.onprogress = function(evt) {
+                                var percentComplete = parseInt(100.0 * evt.loaded / evt.total);
+                                // Upload in progress
+                            };
                         
-                    
-                        previewImage112(file);
+                            xhr.onload = function() {
+                                if (xhr.status === 200) {
+                                    var fileInfo = JSON.parse(xhr.response);
+                                    // Upload succeeded
+                                }
+                                else {
+                                    var errorMessage = xhr.response || 'Unable to upload file';
+                                    // Upload failed
+                                    alert("Error 0x1 - Please contact @ValkyOW")
+                                    console.log(errorMessage)
+                                }
+                            };
+                        
+                            xhr.open('POST', 'https://content.dropboxapi.com/2/files/upload');
+                            xhr.setRequestHeader('Authorization', 'Bearer ' + dropboxToken);
+                            xhr.setRequestHeader('Content-Type', 'application/octet-stream');
+                            xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
+                                path: '/' +  file.name,
+                                mode: 'add',
+                                autorename: false,
+                                mute: false
+                            }));
+                        
+                            xhr.send(file);
+                            
+                            previewImage112(file);
 
+                        }
 
-
+                    } else {
+                        alert("Wrong image size, choose 112x112 image.")
                     }
-                } else {
-                    alert("Wrong image size, choose 112x112 image.")
-                }
-            };
-            img.onerror = function() {
-                alert( "not a valid file: " + file.type);
-            };
-            img.src = _URL.createObjectURL(file);
 
+                };
+            }
+
+            try {
+                img.src = _URL.createObjectURL(file);
+            } catch(err) {}
 
         }
         
     } else {
-        alert("Already uploaded a 112px emote.")
+        alert("Already submitted a 112px emote.")
     }
 
 });
@@ -212,10 +226,13 @@ function previewImage28(file) {
 }
 
 
+
+
      
 // File Preview for 112x112 Images               
 function previewImage112(file) {
     
+    // Variables for gallery
     var galleryId = "gallery-112";
     var gallery = document.getElementById(galleryId);
     var imageType = /image.*/;
@@ -224,6 +241,7 @@ function previewImage112(file) {
     var thumb = document.createElement("div");
     thumb.classList.add('thumbnail'); 
 
+    // Add the image as child
     var img = document.createElement("img");
     img.file = file;
     thumb.appendChild(img);
@@ -249,6 +267,3 @@ function previewImage112(file) {
 
 }
 
-
-
-// pull-down-submitted
