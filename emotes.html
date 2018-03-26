@@ -42,13 +42,24 @@
 
 
     <!-- main content -->
-    <div class="container">
+    <div class="container global-font-color">
 
       <br>
+      <div class="pull-center">
+          <h1>Custom Emotes</h1>
+          <message>
+            In this form you can upload an own custom emote.<br>
+            If you upload own emotes, you are willing to let everyone use it globaly on Twitch.<br>
+            Please note that it can take up to 5 days until your emote got approved.<br><br>
+            - The submitted emote needs to be either PNG or GIF.<br>
+            - The submitted emote needs to match the exact height and width.
+          </message>
+      </div>
+
+      <br><br>
       <div class="row justify-content-md-center">
-        
         <div class="col-auto">
-          <div class="pull-center global-font-color">
+          <div class="pull-center">
             Custom Emote 28px:
           </div>
           <form class="pull-down">
@@ -56,11 +67,10 @@
             <label for="fileinput-28">Submit Emote</label>
           </form>
           <div class="pull-down" id="gallery-28"></div>
-          <div class="pull-center global-font-color" id="confirm-28"></div>
+          <div class="pull-center" id="confirm-28"></div>
         </div>
-
         <div class="col-auto">
-          <div class="pull-center global-font-color">
+          <div class="pull-center">
             Custom Emote 112px:
           </div>
           <form class="pull-down">
@@ -68,14 +78,23 @@
             <label for="fileinput-112">Submit Emote</label>
           </form>
           <div class="pull-down" id="gallery-112"></div>
-          <div class="pull-center global-font-color" id="confirm-112"></div>
+          <div class="pull-center" id="confirm-112"></div>
         </div>
-        
       </div>
+
+      <br><br>
+      <div class="pull-center">
+        <h1>All Global Emotes</h1>
+        <message>Have a look at all approved emotes, which can be used globally on Twitch with VCE.</message>
+        <div class="pull-down text-center" id="gallery-global">
+            <img src="" class="rounded" alt="">
+        </div>
+      </div>
+
     </div>
 
     <!-- footer content -->
-    <div>
+    <foot>
       <div class="container">
         <br><hr><br>
         <div class="row">
@@ -100,7 +119,7 @@
 
         </div>
       </div>
-    </div>
+    </foot>
 
 
 

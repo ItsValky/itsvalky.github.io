@@ -29,11 +29,8 @@ $("#fileinput-28").change(function(e) {
     if (isEmpty($('#gallery-28'))) {
 
         if ((file = this.files[0])) {
-            
             fileType = file.type.replace("image/", "");
-            if (fileType != "png" || fileType != "gif") {
-                alert("Not a valid image type. PNG and GIF are supported.");
-            } else {
+            if ((fileType == "png" && fileType != "gif") || (fileType == "gif" && fileType != "png")) {
 
                 img = new Image();
                 img.onload = function() {
@@ -60,6 +57,8 @@ $("#fileinput-28").change(function(e) {
                                     console.log(errorMessage)
                                 }
                             };
+                            
+                            //fileName = file.name.replace(/.png|.gif/, "")
 
                             xhr.open('POST', 'https://content.dropboxapi.com/2/files/upload');
                             xhr.setRequestHeader('Authorization', 'Bearer ' + dropboxToken);
@@ -78,10 +77,13 @@ $("#fileinput-28").change(function(e) {
                         }
 
                     } else {
-                        alert("Wrong image size, choose 28x28 image.")
+                        alert("Wrong image size, choose a 28px image.")
                     }
 
                 };
+
+            } else {
+                alert("Not a valid image type. PNG and GIF are supported.");
             }
             
             try {
@@ -104,7 +106,7 @@ $("#fileinput-28").change(function(e) {
 
 
 
-// File Upload for 28x28 Images
+// File Upload for 112x112 Images
 // ----------------------------
 
 $("#fileinput-112").change(function(e) {
@@ -113,11 +115,8 @@ $("#fileinput-112").change(function(e) {
     if (isEmpty($('#gallery-112'))) {
 
         if ((file = this.files[0])) {
-            
             fileType = file.type.replace("image/", "");
-            if (fileType != "png" || fileType != "gif") {
-                alert("Not a valid image type. PNG and GIF are supported.");
-            } else {
+            if ((fileType == "png" && fileType != "gif") || (fileType == "gif" && fileType != "png")) {
 
                 img = new Image();
                 img.onload = function() {
@@ -144,6 +143,8 @@ $("#fileinput-112").change(function(e) {
                                     console.log(errorMessage)
                                 }
                             };
+                            
+                            //fileName = file.name.replace(/.png|.gif/, "")
                         
                             xhr.open('POST', 'https://content.dropboxapi.com/2/files/upload');
                             xhr.setRequestHeader('Authorization', 'Bearer ' + dropboxToken);
@@ -162,10 +163,12 @@ $("#fileinput-112").change(function(e) {
                         }
 
                     } else {
-                        alert("Wrong image size, choose 112x112 image.")
+                        alert("Wrong image size, choose a 112px image.")
                     }
 
                 };
+            } else {
+                alert("Not a valid image type. PNG and GIF are supported.");
             }
 
             try {
