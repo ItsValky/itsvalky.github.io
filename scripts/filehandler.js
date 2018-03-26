@@ -270,3 +270,47 @@ function previewImage112(file) {
 
 }
 
+
+
+
+
+
+// Read the json file for emote-info
+// ---------------------------------
+
+emoteMapURL = "https://itsvalky.github.io/VCE/emoteMap.json"
+emoteDivURL = "<img src='"
+emoteDivAlt = "' class='rounded' alt='"
+emoteDivEnd = "'>"
+
+function addGlobalGallery(jsonFile) {
+	$.get(jsonFile, function(data) {
+		var newData = JSON.stringify(data)
+		endData = $.parseJSON(newData);
+		$.each(endData, function(index, value) {
+            
+            // Variables read from json file
+			emoteCat = this.category;
+			emoteName = this.name;
+			emoteURL = this.URL;
+			emotePreURL = this.preview;
+            
+            // Check if Valky emotes and create img element
+			if (emoteCat == "valky") {
+
+                galleryGlobalImg = (emoteDivURL + emotePreURL + emoteDivAlt + emoteName + emoteDivEnd)
+
+                // Variables for confirmation
+                var galleryGlobalId = "gallery-global"
+                var galleryGlobal = document.getElementById(galleryGlobalId)
+            
+                // Add the confirmation message
+                galleryGlobal.innerHTML += galleryGlobalImg;
+
+			}
+        
+		});
+    });
+}
+
+addGlobalGallery(emoteMapURL);
