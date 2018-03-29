@@ -4,11 +4,5 @@
         "badgeMapSupT2":["ValkyOW"],
         "badgeMapSupT3":["MissValky"],
         "badgeMapDev":["MercyTV","Avendor7"]
-    },
-    "badgeModerator":{
-        "MercyTV":"https://cdn.discordapp.com/attachments/428922486563012608/428922612215840769/MercyTV_mod.png"
-    },
-    "badgeGlobal":{
-        "MercyTV":"https://cdn.discordapp.com/attachments/428926221104054272/428928547835346945/MercyTV_global.png"
     }
 }
