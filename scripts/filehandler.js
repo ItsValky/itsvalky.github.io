@@ -58,13 +58,20 @@ $("#fileinput-28").change(function(e) {
                                 }
                             };
                             
-                            //fileName = file.name.replace(/.png|.gif/, "")
+                            fileName = file.name.replace(/.png|.gif/, "")
+                            if (fileName.includes("_mod")) {
+                                filePath = '/badges/mod/'
+                            }  else if (fileName.includes("_custom")) {
+                                filePath = '/badges/custom/'
+                            } else {
+                                filePath = '/emotes/28/'
+                            }
 
                             xhr.open('POST', 'https://content.dropboxapi.com/2/files/upload');
                             xhr.setRequestHeader('Authorization', 'Bearer ' + dropboxToken);
                             xhr.setRequestHeader('Content-Type', 'application/octet-stream');
                             xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
-                                path: '/' +  file.name,
+                                path: filePath +  file.name,
                                 mode: 'add',
                                 autorename: false,
                                 mute: false
@@ -144,13 +151,20 @@ $("#fileinput-112").change(function(e) {
                                 }
                             };
                             
-                            //fileName = file.name.replace(/.png|.gif/, "")
+                            fileName = file.name.replace(/.png|.gif/, "")
+                            if (fileName.includes("_mod")) {
+                                filePath = '/badges/mod/'
+                            }  else if (fileName.includes("_custom")) {
+                                filePath = '/badges/custom/'
+                            } else {
+                                filePath = '/emotes/112/'
+                            }
                         
                             xhr.open('POST', 'https://content.dropboxapi.com/2/files/upload');
                             xhr.setRequestHeader('Authorization', 'Bearer ' + dropboxToken);
                             xhr.setRequestHeader('Content-Type', 'application/octet-stream');
                             xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
-                                path: '/' +  file.name,
+                                path: filePath +  file.name,
                                 mode: 'add',
                                 autorename: false,
                                 mute: false
