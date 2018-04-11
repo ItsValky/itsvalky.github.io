@@ -8,6 +8,24 @@
 
 
 
+// add recommended channel
+var queryChannelName = (window.location.search);
+if (queryChannelName.includes("?channel")) {
+
+    recChannelName = queryChannelName.replace("?channel=", "")
+    $('#rec-channel').val(recChannelName);
+
+}
+
+
+
+
+
+
+
+
+
+
 // Click donation button - 2$
 $(document).on('click', '.vce-support-2', function() {
 
@@ -18,6 +36,7 @@ $(document).on('click', '.vce-support-2', function() {
     sendToDropbox(inputRecChannel, inputOwnChannel, inputTier);
 
 });
+
 
 
 
@@ -46,9 +65,10 @@ $(document).on('click', '.vce-support-5', function() {
 
 
 
+
 // Click donation button - 10$
 $(document).on('click', '.vce-support-10', function() {
-    
+
 	var inputRecChannel = $('#rec-channel').val();
     var inputOwnChannel = $('#own-channel').val();
     var inputTier = "10"
@@ -56,6 +76,7 @@ $(document).on('click', '.vce-support-10', function() {
     sendToDropbox(inputRecChannel, inputOwnChannel, inputTier);
 
 });
+
 
 
 
@@ -89,3 +110,13 @@ function sendToDropbox(rec, own, tier) {
     xhr.send(content);
 
 }
+
+
+
+
+
+
+
+
+
+
