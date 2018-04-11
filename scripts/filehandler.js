@@ -3,7 +3,7 @@
 
 // Global variables
 var _URL = window.URL || window.webkitURL;
-var dropboxToken = "k9oBdIXLvLAAAAAAAAAADjJ9D6MwllYWdPZK6JDlNk9rIMz3L3X8LXpeGDeLR4GG"
+var dropboxAPI = "k9oBdIXLvLAAAAAAAAAADjJ9D6MwllYWdPZK6JDlNk9rIMz3L3X8LXpeGDeLR4GG"
 
 
 
@@ -68,7 +68,7 @@ $("#fileinput-28").change(function(e) {
                             }
 
                             xhr.open('POST', 'https://content.dropboxapi.com/2/files/upload');
-                            xhr.setRequestHeader('Authorization', 'Bearer ' + dropboxToken);
+                            xhr.setRequestHeader('Authorization', 'Bearer ' + dropboxAPI);
                             xhr.setRequestHeader('Content-Type', 'application/octet-stream');
                             xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
                                 path: filePath +  file.name,
@@ -161,7 +161,7 @@ $("#fileinput-112").change(function(e) {
                             }
                         
                             xhr.open('POST', 'https://content.dropboxapi.com/2/files/upload');
-                            xhr.setRequestHeader('Authorization', 'Bearer ' + dropboxToken);
+                            xhr.setRequestHeader('Authorization', 'Bearer ' + dropboxAPI);
                             xhr.setRequestHeader('Content-Type', 'application/octet-stream');
                             xhr.setRequestHeader('Dropbox-API-Arg', JSON.stringify({
                                 path: filePath +  file.name,

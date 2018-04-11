@@ -159,3 +159,20 @@ a:active {
     width: 112px;
     height: 112px;
 }
+
+input[type=text] {
+    text-align: center;
+    border: 2px solid #FA9C1E;
+    border-radius: 4px;
+    padding: 12px 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    outline: none;
+    color: #FA9C1E;
+    background-color: #4D4C4E;
+}
+
+input[type=text]:focus {
+    border: 2px solid #CE7F18;
+    color: #CE7F18;
+}
