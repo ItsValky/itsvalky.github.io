@@ -98,11 +98,13 @@ a:active {
     display: inline-block;
     font-size: 19px;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .dl-button:hover {
     background-color: #CE7F18;
     color: white;
+    cursor: pointer;
 }
 
 .inputfile {
@@ -112,6 +114,7 @@ a:active {
 	overflow: hidden;
 	position: absolute;
 	z-index: -1;
+    cursor: pointer;
 }
 
 .inputfile + label {
@@ -124,6 +127,7 @@ a:active {
     display: inline-block;
     font-size: 19px;
     border-radius: 8px;
+    cursor: pointer;
 }
 
 .inputfile + label:hover {
@@ -175,4 +179,17 @@ input[type=text] {
 input[type=text]:focus {
     border: 2px solid #CE7F18;
     color: #CE7F18;
+}
+
+.login-area-image {
+    height: 32px;
+    width: 32px;
+}
+
+.login-area-name {
+    padding-left: 10px;
+}
+
+.supporter-confirm {
+    color: #FA9C1E;
 }

@@ -32,8 +32,10 @@
             </div>
           </div>
         </div>
-        <!--<a href="https://api.twitch.tv/kraken/oauth2/authorize?response_type=code&client_id=8fz5icnov4zylwrt45ybv0b7dpavkp&redirect_uri=http://localhost:8000/index.html&scope=user_read">Login with Twitch</a>-->
-        <div class="global-font-color">Welcome!</div>
+        <div class="global-font-color login-area">
+          <!--<a class="login-area-link" href="https://id.twitch.tv/oauth2/authorize?response_type=token&client_id=8fz5icnov4zylwrt45ybv0b7dpavkp&redirect_uri=http://localhost:8000/index.html">Login with Twitch</a>-->
+          <a class="login-area-link" href="https://id.twitch.tv/oauth2/authorize?response_type=token&client_id=szg9bkjyvnowb5njuznvrfeqqqyvfv&redirect_uri=https://itsvalky.github.io/">Login with Twitch</a>
+        </div>
       </div>
     </nav>
     <div class="container pull-up">
@@ -136,9 +138,13 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+    <!-- Custom JavaScript -->
+    <script src="/scripts/cookie.js"></script>
+    <script src="/scripts/twitchcall.js"></script>
   
   </body>
 </html>

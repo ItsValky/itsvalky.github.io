@@ -15,6 +15,21 @@ function isEmpty(el) {
 
 
 
+if (Cookies.get("twitchLoggedIn") == 1) {
+    
+    $('#fileinput-28').prop('disabled', false);
+    $('#fileinput-112').prop('disabled', false);
+
+    userLogin = Cookies.get("userLogin")
+    userImage = Cookies.get("userImage")
+    userDisplay = Cookies.get("userDisplay")
+
+} 
+/* else {
+    $('#fileinput-28').prop('disabled', true);
+    $('#fileinput-112').prop('disabled', true);
+} */
+
 
 
 
