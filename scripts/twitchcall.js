@@ -61,21 +61,21 @@ function parseUserData(data) {
         $.each(subval, function(subSubKey, subSubVal) {
             $.each(subSubVal, function(finalKey, finalVal) {
 
-                Cookies.set("twitchLoggedIn", 1, { expires: 7 })
+                Cookies.set("twitchLoggedIn", 1)
 
                 if (finalKey == "login") {
                     userLogin = finalVal
-                    Cookies.set("userLogin", userLogin, { expires: 7 })
+                    Cookies.set("userLogin", userLogin)
                 }
 
                 if (finalKey == "profile_image_url") {
                     userImage = finalVal
-                    Cookies.set("userImage", userImage, { expires: 7 })
+                    Cookies.set("userImage", userImage)
                 }
 
                 if (finalKey == "display_name") {
                     userDisplay = finalVal
-                    Cookies.set("userDisplay", userDisplay, { expires: 7 })
+                    Cookies.set("userDisplay", userDisplay)
                 }
 
             });
