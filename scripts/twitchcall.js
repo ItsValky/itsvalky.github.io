@@ -4,16 +4,16 @@
 
 
 
-if (Cookies.get("twitchLoggedIn") == 1) {
+//if (Cookies.get("twitchLoggedIn") == 1) {
 
-    userLogin = Cookies.get("userLogin")
-    userImage = Cookies.get("userImage")
-    userDisplay = Cookies.get("userDisplay")
+//    userLogin = Cookies.get("userLogin")
+//    userImage = Cookies.get("userImage")
+//    userDisplay = Cookies.get("userDisplay")
 
-    $('.login-area-link').remove();
-    $('.login-area').append('<img class="login-area-image" src="' + userImage + '"><label class="login-area-name">' + userDisplay + '</label>')
+//    $('.login-area-link').remove();
+//    $('.login-area').append('<img class="login-area-image" src="' + userImage + '"><label class="login-area-name">' + userDisplay + '</label>')
 
-}
+//}
 
 
 
@@ -47,7 +47,7 @@ function getUserData () {
 
     xhr.open('GET', 'https://api.twitch.tv/helix/users');
     xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
-    xhr.setRequestHeader('Client-Id', 'szg9bkjyvnowb5njuznvrfeqqqyvfv');
+    xhr.setRequestHeader('Client-Id', 'y36lp2wlipwla5b5399k4jomf9bsix');
     xhr.send();
 
 }
