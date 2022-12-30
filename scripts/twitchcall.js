@@ -47,7 +47,7 @@ function getUserData () {
 
     xhr.open('GET', 'https://api.twitch.tv/helix/users');
     xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
-    xhr.setRequestHeader('Client-Id', 'y36lp2wlipwla5b5399k4jomf9bsix');
+    xhr.setRequestHeader('Client-Id', '8fz5icnov4zylwrt45ybv0b7dpavkp');
     xhr.send();
 
 }
